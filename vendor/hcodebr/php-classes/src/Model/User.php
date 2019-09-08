@@ -166,7 +166,7 @@ class User extends Model {
 
 				$code = base64_encode(openssl_encrypt($dataRecovery["idrecovery"], "AES-128-ECB", User::SECRET));
 
-				$link = "http://www.hcodecommerce.com.br:8080/admin/forgot/reset?code=$code";
+				$link = "http://www.hcodecommerce.com.br/admin/forgot/reset?code=$code";
 
 				$mailer = new Mailer($data["desemail"], $data["desperson"], "Redefinir senha da Hcode Store", "forgot", array(
 					"name"=>$data["desperson"],
